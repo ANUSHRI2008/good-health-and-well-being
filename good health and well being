@@ -1,0 +1,178 @@
+<html>
+  <head></head> 
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class='logo'>GOOD HEALTH AND WELL BEING</div>
+        
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+      </nav>
+      <div class="main-image">
+       <a href='https://www.globalgoals.org/goals/3-good-health-and-well-being/'><img src='https://ca-times.brightspotcdn.com/dims4/default/bb60523/2147483647/strip/true/crop/2000x1333+0+0/resize/2000x1333!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F8e%2Fb7%2F99beae9a4be0bbced1487b04b619%2Fla-hm-nyny-mental-health.jpg' alt=""></a>
+        <li><a href="#">click the picture above for more information</a></li>
+      </div>
+    </header>
+    <section>
+      <div id="tracking_id">
+      <div class="inner_tracking title">
+        <h2 class='health'>How are you feeling?</h2>
+      </div>
+      <div class="inner_tracking main">
+        <div class="child_tracking">
+          <img src='https://w7.pngwing.com/pngs/6/487/png-transparent-computer-icons-pulse-heart-rate-symbol-symbol-love-miscellaneous-text.png' height='50px' width='80px'>
+          <h5>Heart Rate</h5>
+          <p><span class='counter' data-target='75'>0</span> bpm</p>
+        </div>
+         <div class="child_tracking">
+          <img  src='https://static.vecteezy.com/system/resources/previews/005/728/581/original/moon-night-moonlight-midnight-solid-icon-illustration-logo-template-suitable-for-many-purposes-free-vector.jpg'height='50px'width='80px'>
+          <h5>sleep</h5>
+          <p><spanclass='counter' data-target='8'>0</spanclass> hrs</p>
+        </div>
+         <div class="child_tracking">
+          <img src='https://png.pngtree.com/png-vector/20190418/ourlarge/pngtree-vector-juice-icon-png-image_956090.jpg'height='50px'width='80px'></a>
+          <h5>Water</h5>
+          <p><spanclass='counter' data-target='10'>0</spanclass> Glass</p>
+        </div>
+         <div class="child_tracking">
+          <img src='https://cdn.w600.comps.canstockphoto.com/walking-man-symbol-pedestrian-icon-vector-clipart_csp63244407.jpg'height='50px'width='80px'></a>
+          <h5>Steps</h5>
+          <p><span class='counter' data-target='10500'>0</span> bpm</p>
+        </div>
+    </div></div> 
+    </section>
+  </body>
+</html>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family:sans-serif;
+  background-color:#F06292;
+  padding:0 80px;
+}
+a{
+  text-decoration:none;
+}
+li{
+  list-style-type:none;
+}
+header{
+ width:100%;
+ height:100vh;
+}
+nav.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.navbar .logo{
+  font-size:2.2rem;
+  font-weight:bold;
+  letter-spacing:1px;
+  color:#154360;
+  font-family:cursive;
+}
+.navbar ul{
+  display:flex;
+  align-items:center;
+  gap:14px
+}
+.navbar ul a{
+  color:#fff;
+  letter-spacing:1px;
+  color:#2874A6;
+  font-weight:bold;
+ }
+.main-image{
+  width:100%;
+  margin-top:40px;
+  height:80%
+}
+.main-image img{
+  width:100%;
+   height:100%;
+}
+#tracking_id{
+  width:100%;
+  clear:both;
+  padding:45px 0;
+}
+.inner_tracking{
+  width:98%;
+  max-width:1140px;
+  margin:0 auto;
+  text-align:center
+}
+.inner_tracking main{
+  display: flex;
+}
+.inner_tracking h2{
+  margin-bottom:20px;
+}
+.child_tracking{
+  width:25;
+  background:#D50000;
+}
+#tracking_id .main{
+  display:flex;
+  justify-content:space-between;
+  algin-items:center;
+  margin-top:14px;
+}
+.child_tracking:nth-child(1){
+  background:#D50000;
+}
+.child_tracking:nth-child(2){
+  background:#FF6F00;
+}
+.child_tracking:nth-child(3){
+  background:#FFFF00;
+}
+.child_tracking:nth-child(4){
+  background:#0091EA;
+}
+// let counter=document.querySelector('.counter');
+
+// let count=1;
+
+// setInterval(()=>{
+//   if (count< 75){
+//     count++;
+//     counter.innerText=count;
+//   }
+// }, 0.1);
+
+
+let counter=document.querySelectorAll('.counter');
+let time=200;
+
+counter.forEach(counter =>{
+  let updateCounter=() =>{
+    let target= +counter.getAttribute('data-target');
+    let count= +count.innerText;
+    
+    let increment= targret/time;
+    
+    if(count<target)
+      counter.innerText=count+increment;
+    setTimeout(updateCounter, 1);
+  }else{
+    counter.innerText= target;
+  }
+    
+  updateCounter();
+})
+
+let healthCondition= document.querySelector('health');
+setTimeout(() =>{
+  healthCondition.innerText="YOU ARE FIT"
+}, 2000);
+
+
+
+
